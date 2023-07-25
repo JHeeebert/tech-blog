@@ -1,0 +1,23 @@
+{{ postInfo post}}
+
+{{#if loggedIn}}
+<form class="new-comment">
+    <h3>Add a Comment</h3>
+    <div class="form-group">
+        <label for="comment-body">Comment:</label>
+        <textarea name="comment-body" id="comment-body" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit">Add Comment</button>
+</form>
+{{/if}}
+{{#each comments as |comment|}}
+<div class="comment">
+    <p>{{comment.body}}</p>
+    <p>Author: {{comment.author}}</p>
+</div>
+{{/each}}
+
+{{#if loggedIn}}
+<script src="/public/js/comment.js"></script>
+{{/if}}
+```
