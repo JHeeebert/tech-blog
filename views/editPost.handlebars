@@ -1,0 +1,34 @@
+<div>
+    <a href="/dashboard"> &larr; Back to Dashboard</a>
+    <h2>Edit Post</h2>
+    <form class="edit-post-form">
+        <div class="form-group">
+            <label for="post-title">Title:</label>
+            <input type="text" name="post-title" id="post-title" value="{{title}}">
+        </div>
+        <div class="form-group">
+            <label for="post-body">Post:</label>
+            <textarea name="post-body" id="post-body" cols="30" rows="10">{{body}}</textarea>
+        </div>
+        <div>
+            Posted by you on {{format_date createdAt}}
+        </div>
+        <button type="submit">Update Post</button>
+        <button type="button" class="delete">Delete Post</button>
+    </form>
+</div>
+<form class="comment-form">
+    <h3>Add a Comment</h3>
+    <div class="form-group">
+        <label for="comment-body">Comment:</label>
+        <textarea name="comment-body" id="comment-body" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit">Add Comment</button>
+</form>
+
+{{> comments post.comments}}
+
+<script src="/public/js/editPost.js"></script>
+<script src="/public/js/comment.js"></script>
+<script src="/public/js/deletePost.js"></script>
+```
