@@ -1,0 +1,38 @@
+<section class="row">
+    <div class="col-md-12">
+        <h1>Create New Post</h1>
+        <form class="new-post-form">
+            <div class="form-group">
+                <label for="post-title">Title:</label>
+                <input type="text" name="post-title" id="post-title">
+            </div>
+            <div class="form-group">
+                <label for="post-body">Post:</label>
+                <textarea name="post-body" id="post-body" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Create Post</button>
+        </form>
+    </div>
+    <div class="col-md-12">
+        <h1>About</h1>
+        {{> userInfo}}
+    </div>
+</section>
+
+{{#if posts.length}}
+<section>
+    <h1>My Posts</h1>
+    <ul class="post-list">
+        {{#each posts as |post|}}
+        <li>
+            <h2><a href="/post/{{this.id}}">{{this.title}}</a></h2>
+            <p>{{this.body}}</p>
+            <p>Author: {{this.author}}</p>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{/if}}
+
+<script src="/public/js/addPost.js"></script>
+```
