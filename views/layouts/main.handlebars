@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/css/style.css">   
+</head>
+
+<body>
+    <div class="container">
+    <header>
+        <h1>
+            <a href="/">Tech Blog</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+            {{#if loggedIn}}
+                <ul>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            {{else}}
+                <ul>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            {{/if}}
+        </nav>
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+    </div>
+    {{#if loggedIn}}
+        <script src="/public/js/logout.js"></script>
+    {{/if}}
+</body>
+    <footer>
+        <p>&copy; 2023 Tech Blog</p>
+    </footer>
+</html>
