@@ -1,0 +1,15 @@
+<div class="post">
+    <div class="post-title">
+        <h2>{{title}}</h2>
+        <div class="post-meta"> 
+            <p>Author: {{author}}</p>
+            <p>Created on {{format_date created_at}}</p>
+        </div>
+        <div class="post-comments">
+            {{format_plural comments "Comment"}}
+        </div>
+        <div class="post-content">
+            {{post-content}}
+        </div>
+    </div>
+</div>
