@@ -1,0 +1,24 @@
+<div>
+    <a href="/dashboard"> &larr; Back to Dashboard</a>
+    <h2>Edit User</h2>
+    <form class="edit-user-form" <div class="form-group">
+        <label for="user-username">Username:</label>
+        <input type="text" name="user-username" id="user-username" value="{{username}}">
+</div>
+<div class="form-group">
+    <label for="user-email">Email:</label>
+    <input type="email" name="user-email" id="user-email" value="{{email}}">
+</div>
+<div class="form-group">
+    <label for="user-password">Password:</label>
+    <input type="password" name="user-password" id="user-password" value="{{password}}">
+</div>
+<div>
+    User since {{format_date createdAt}}
+</div>
+<button type="submit">Update User</button>
+<button type="button" class="delete">Delete User</button>
+</form>
+</div>
+</div>
+<script src="/public/js/editUser.js"></script>
