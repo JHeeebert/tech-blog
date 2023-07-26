@@ -2,6 +2,9 @@ const router = require('express').Router();
 const userRoutes = require('./userRoute');
 const postRoutes = require('./postRoute');
 const commentRoutes = require('./commentRoutes');
+
+// Route the routes to their respective files
+router.use('/user', userRoutes);
 router.use('/post', postRoutes);
 router.use('/comment', commentRoutes);
 
