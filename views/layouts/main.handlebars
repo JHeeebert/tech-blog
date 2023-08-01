@@ -15,11 +15,13 @@
                 <a href="/">Tech Blog</a>
             </h1>
             <nav>
-                <ul>
+                {{!-- Future Development --}}
+                {{!-- <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/contact">Contact Us</a></li>
-                </ul>
+                </ul> --}}
+                {{!-- Future Development --}}
                 {{#if loggedIn}}
                 <ul>
                     <li><a href="/dashboard">Dashboard</a></li>
@@ -28,7 +30,7 @@
                 {{else}}
                 <ul>
                     <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Register</a></li>
+                    <li><a href="/signup">Sign Up Here</a></li>
                 </ul>
                 {{/if}}
             </nav>
@@ -38,7 +40,7 @@
         </main>
     </div>
     {{#if loggedIn}}
-    <script src="/public/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
 </body>
 <footer>

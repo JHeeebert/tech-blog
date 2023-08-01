@@ -45,7 +45,7 @@ GitHub Repo: https://github.com/jheeebert/tech-blog
 [![Inquirer](https://img.shields.io/badge/Inquirer-8.2.4-blue)](https://github.com/SBoudrias/Inquirer.js)
 # Contributing 🔍
   [Contributors Covenant](https://www.contributor-covenant.org/) <br>
-  [![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=Jheeebert/tech-blog)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=Jheeebert/tech-blog)
+  
   <br>
 1. Fork the repository on GitHub.
 2. Create a new branch with a descriptive name: `git checkout -b my-branch`
