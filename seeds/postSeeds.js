@@ -1,4 +1,6 @@
-[
+const { Post } = require('../models');
+
+const postData = [
    {
       "Title": "JavaScript Error a life story",
       "post_text": "I get more errors than I get likes on my posts",
@@ -30,3 +32,6 @@
       "user_id": 6
    }
 ]
+
+const seedPosts = () => Post.bulkCreate(postData);
+module.exports = seedPosts;
