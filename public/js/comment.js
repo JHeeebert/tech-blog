@@ -7,7 +7,7 @@ async function commentForm(event) {
     const post_id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
 // if the comment text exists, use the add comment route to add the comment to the database
     if (comment_text) {
-        const response = await fetch('/api/comments', {
+        const response = await fetch('/api/comment', {
             method: 'POST',
             body: JSON.stringify({ post_id, comment_text }),
             headers: { 'Content-Type': 'application/json' }
