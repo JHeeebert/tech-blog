@@ -1,15 +1,11 @@
-<div class="post">
-    <div class="post-title">
-        <h2>{{title}}</h2>
-        <div class="post-meta"> 
-            <p>Author: {{author}}</p>
-            <p>Created on {{format_date created_at}}</p>
-        </div>
-        <div class="post-comments">
-            {{format_plural comments "Comment"}}
-        </div>
-        <div class="post-content">
-            {{post-content}}
-        </div>
+<article class="post">
+    <div class="title">
+        <span><a href="/post/{{id}}">{{title}}</a></span><span style="float:right">Posted by {{user.username}} on
+            {{format_date created_at}}</span><br />
+        <span style="float:right">{{comments.length}}
+            {{format_plural "comment" comments.length}}</span>
     </div>
-</div>
+    <div class="content">
+        <p>{{post_text}}</p>
+    </div>
+</article>
