@@ -1,38 +1,39 @@
 <section class="row">
-    <div class="col-md-12">
-        <h1>Create New Post</h1>
+    <div class="column">
+        <h2>Create New Post</h2>
+
         <form class="new-post-form">
-            <div class="form-group">
-                <label for="post-title">Title:</label>
-                <input type="text" name="post-title" id="post-title">
+            <div>
+                <label for="post-title">Title</label>
+                <input type="text" id="post-title" name="post-title" />
             </div>
-            <div class="form-group">
-                <label for="post-body">Post:</label>
-                <textarea name="post-body" id="post-body" cols="30" rows="10"></textarea>
+            <div>
+                <label for="post-text">Text</label>
+                <textarea id="post-text" name="post-text"></textarea>
             </div>
-            <button type="submit">Create Post</button>
+            <button type="submit" class="btn">Create</button>
         </form>
     </div>
-    <div class="col-md-12">
-        <h1>About</h1>
+    <div class="column">
+        <h2>About Me</h2>
         {{> userInfo}}
     </div>
+
 </section>
 
 {{#if posts.length}}
 <section>
-    <h1>My Posts</h1>
-    <ul class="post-list">
+    <h2>Your Posts</h2>
+    <ol>
         {{#each posts as |post|}}
         <li>
-            <h2><a href="/post/{{this.id}}">{{this.title}}</a></h2>
-            <p>{{this.body}}</p>
-            <p>Author: {{this.author}}</p>
+            {{> postInfo post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
         </li>
         {{/each}}
-    </ul>
+    </ol>
 </section>
 {{/if}}
 
-<script src="/public/js/addPost.js"></script>
+<script src="/js/addPost.js"></script>
 ```
