@@ -1,17 +1,21 @@
-<div>
+<article>
     <a href="/dashboard"> &larr; Back to Dashboard</a>
     <h2>Edit User</h2>
-    <form class="edit-user-form" <div class="form-group">
-        <label for="user-username">Username:</label>
-        <input type="text" name="user-username" id="user-username" value="{{username}}">
+    <form class="edit-user-form">
+<div>
+        <label for="user-name">User Name:</label>
+        <input name="user-name" value="{{user.username}}"/>
 </div>
-<div class="form-group">
-    <label for="user-email">Email:</label>
-    <input type="email" name="user-email" id="user-email" value="{{email}}">
+<div>
+    <label for="email">Email:</label>
+    <input name="email" value="{{user.email}}"/>
 </div>
-<div class="form-group">
-    <label for="user-password">Password:</label>
-    <input type="password" name="user-password" id="user-password" value="{{password}}">
+<div>
+    <label for="password">Password:</label>
+    <input type="password" name="password"/>
+</div>
+<div>
+    <input type="hidden" id="user-id" value="{{user.id}}"/>
 </div>
 <div>
     User since {{format_date createdAt}}
@@ -19,6 +23,5 @@
 <button type="submit">Update User</button>
 <button type="button" class="delete">Delete User</button>
 </form>
-</div>
-</div>
-<script src="/public/js/editUser.js"></script>
+</article>
+<script src="/js/editUser.js"></script>
