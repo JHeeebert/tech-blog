@@ -1,7 +1,7 @@
 // Initiated by clicking on the logout button in the nav bar
 async function logout() {
 // use the logout route to logout the user
-    const response = await fetch('/api/users/logout', {
+    const response = await fetch('/api/user/logout', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' }
     });

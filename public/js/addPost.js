@@ -1,5 +1,5 @@
 // Purpose: addPost.js is used to add a new post to the database
-async function addPost(event) {
+async function addPostForm(event) {
     event.preventDefault();
 // get the post title and post content from the form
     const title = document.querySelector('#post-title').value.trim();
@@ -25,4 +25,4 @@ async function addPost(event) {
     }
 }
 // add an event listener to the form to call the addPost function when the form is submitted
-document.querySelector('#add-post-form').addEventListener('submit', addPost);
+document.querySelector('#add-post-form').addEventListener('submit', addPostForm);
