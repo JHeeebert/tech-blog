@@ -1,36 +1,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tech Blog</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Tech</title>
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
-    <div class="container">
+    <div class="wrapper">
         <header>
             <h1>
-                <a href="/">Tech Blog</a>
+                <a href="/">Blog Tech</a>
             </h1>
             <nav>
-                {{!-- Future Development --}}
-                {{!-- <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                </ul> --}}
-                {{!-- Future Development --}}
+                <span><a href="/">Home</a></span>
                 {{#if loggedIn}}
-                <ul>
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                </ul>
+                <a href="/dashboard">Dashboard</a>
+                <button id="logout" class="btn-no-style">Logout</button>
                 {{else}}
-                <ul>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/signup">Sign Up Here</a></li>
-                </ul>
+                <a href="/login">Login</a>
                 {{/if}}
             </nav>
         </header>
@@ -38,8 +27,11 @@
             {{{body}}}
         </main>
     </div>
+
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
+
 </body>
+
 </html>
